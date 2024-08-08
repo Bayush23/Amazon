@@ -1,0 +1,304 @@
+[debug] [2024-08-08T14:36:20.974Z] ----------------------------------------------------------------------
+[debug] [2024-08-08T14:36:20.976Z] Command:       /Users/bayushabebe/.nvm/versions/node/v18.20.4/bin/node /Users/bayushabebe/.nvm/versions/node/v18.20.4/bin/firebase deploy --only functions
+[debug] [2024-08-08T14:36:20.977Z] CLI Version:   13.15.0
+[debug] [2024-08-08T14:36:20.977Z] Platform:      darwin
+[debug] [2024-08-08T14:36:20.977Z] Node Version:  v18.20.4
+[debug] [2024-08-08T14:36:20.978Z] Time:          Thu Aug 08 2024 10:36:20 GMT-0400 (Eastern Daylight Time)
+[debug] [2024-08-08T14:36:20.979Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-08-08T14:36:21.049Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-08-08T14:36:21.049Z] > authorizing via signed-in user (bayushlegese1919@gmail.com)
+[debug] [2024-08-08T14:36:21.050Z] [iam] checking project clone-fe8e8 for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2024-08-08T14:36:21.051Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/clone-fe8e8:testIamPermissions [none]
+[debug] [2024-08-08T14:36:21.052Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/clone-fe8e8:testIamPermissions x-goog-quota-user=projects/clone-fe8e8
+[debug] [2024-08-08T14:36:21.052Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/clone-fe8e8:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2024-08-08T14:36:21.215Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/clone-fe8e8:testIamPermissions 200
+[debug] [2024-08-08T14:36:21.215Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/clone-fe8e8:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2024-08-08T14:36:21.215Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/clone-fe8e8/serviceAccounts/clone-fe8e8@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2024-08-08T14:36:21.216Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/clone-fe8e8/serviceAccounts/clone-fe8e8@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2024-08-08T14:36:21.793Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/clone-fe8e8/serviceAccounts/clone-fe8e8@appspot.gserviceaccount.com:testIamPermissions 200
+[debug] [2024-08-08T14:36:21.793Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/clone-fe8e8/serviceAccounts/clone-fe8e8@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[info] 
+[info] === Deploying to 'clone-fe8e8'...
+[info] 
+[info] i  deploying functions 
+[debug] [2024-08-08T14:36:21.796Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/clone-fe8e8 [none]
+[debug] [2024-08-08T14:36:22.262Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/clone-fe8e8 200
+[debug] [2024-08-08T14:36:22.262Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/clone-fe8e8 {"projectId":"clone-fe8e8","projectNumber":"782857397307","displayName":"Amazon-Clone","name":"projects/clone-fe8e8","resources":{"hostingSite":"clone-fe8e8","realtimeDatabaseInstance":"clone-fe8e8-default-rtdb"},"state":"ACTIVE","etag":"1_c91f8d0d-21b3-4d43-9f4d-d705aec0faf7"}
+[info] i  functions: preparing codebase default for deployment 
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[info] i  artifactregistry: ensuring required API artifactregistry.googleapis.com is enabled... 
+[debug] [2024-08-08T14:36:22.264Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/clone-fe8e8/services/cloudfunctions.googleapis.com [none]
+[debug] [2024-08-08T14:36:22.264Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/clone-fe8e8/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/clone-fe8e8
+[debug] [2024-08-08T14:36:22.266Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/clone-fe8e8/services/runtimeconfig.googleapis.com [none]
+[debug] [2024-08-08T14:36:22.266Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/clone-fe8e8/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/clone-fe8e8
+[debug] [2024-08-08T14:36:22.267Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/clone-fe8e8/services/cloudbuild.googleapis.com [none]
+[debug] [2024-08-08T14:36:22.267Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/clone-fe8e8/services/cloudbuild.googleapis.com x-goog-quota-user=projects/clone-fe8e8
+[debug] [2024-08-08T14:36:22.268Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/clone-fe8e8/services/artifactregistry.googleapis.com [none]
+[debug] [2024-08-08T14:36:22.268Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/clone-fe8e8/services/artifactregistry.googleapis.com x-goog-quota-user=projects/clone-fe8e8
+[debug] [2024-08-08T14:36:22.538Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/clone-fe8e8/services/cloudfunctions.googleapis.com 200
+[debug] [2024-08-08T14:36:22.538Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/clone-fe8e8/services/cloudfunctions.googleapis.com [omitted]
+[info] ✔  functions: required API cloudfunctions.googleapis.com is enabled 
+[debug] [2024-08-08T14:36:22.545Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/clone-fe8e8/services/cloudbuild.googleapis.com 200
+[debug] [2024-08-08T14:36:22.545Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/clone-fe8e8/services/cloudbuild.googleapis.com [omitted]
+[warn] ⚠  functions: missing required API cloudbuild.googleapis.com. Enabling now... 
+[debug] [2024-08-08T14:36:22.546Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/clone-fe8e8/services/cloudbuild.googleapis.com:enable [none]
+[debug] [2024-08-08T14:36:22.546Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/clone-fe8e8/services/cloudbuild.googleapis.com:enable x-goog-quota-user=projects/clone-fe8e8
+[debug] [2024-08-08T14:36:22.552Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/clone-fe8e8/services/runtimeconfig.googleapis.com 200
+[debug] [2024-08-08T14:36:22.552Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/clone-fe8e8/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2024-08-08T14:36:22.553Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/clone-fe8e8/services/artifactregistry.googleapis.com 200
+[debug] [2024-08-08T14:36:22.553Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/clone-fe8e8/services/artifactregistry.googleapis.com [omitted]
+[warn] ⚠  artifactregistry: missing required API artifactregistry.googleapis.com. Enabling now... 
+[debug] [2024-08-08T14:36:22.553Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/clone-fe8e8/services/artifactregistry.googleapis.com:enable [none]
+[debug] [2024-08-08T14:36:22.553Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/clone-fe8e8/services/artifactregistry.googleapis.com:enable x-goog-quota-user=projects/clone-fe8e8
+[debug] [2024-08-08T14:36:23.223Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/clone-fe8e8/services/artifactregistry.googleapis.com:enable 200
+[debug] [2024-08-08T14:36:23.223Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/clone-fe8e8/services/artifactregistry.googleapis.com:enable [omitted]
+[debug] [2024-08-08T14:36:23.232Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/clone-fe8e8/services/cloudbuild.googleapis.com:enable 200
+[debug] [2024-08-08T14:36:23.232Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/clone-fe8e8/services/cloudbuild.googleapis.com:enable [omitted]
+[debug] [2024-08-08T14:36:33.225Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/clone-fe8e8/services/artifactregistry.googleapis.com [none]
+[debug] [2024-08-08T14:36:33.226Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/clone-fe8e8/services/artifactregistry.googleapis.com x-goog-quota-user=projects/clone-fe8e8
+[debug] [2024-08-08T14:36:33.233Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/clone-fe8e8/services/cloudbuild.googleapis.com [none]
+[debug] [2024-08-08T14:36:33.233Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/clone-fe8e8/services/cloudbuild.googleapis.com x-goog-quota-user=projects/clone-fe8e8
+[debug] [2024-08-08T14:36:33.672Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/clone-fe8e8/services/artifactregistry.googleapis.com 200
+[debug] [2024-08-08T14:36:33.672Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/clone-fe8e8/services/artifactregistry.googleapis.com [omitted]
+[info] ✔  artifactregistry: required API artifactregistry.googleapis.com is enabled 
+[debug] [2024-08-08T14:36:33.676Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/clone-fe8e8/services/cloudbuild.googleapis.com 200
+[debug] [2024-08-08T14:36:33.677Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/clone-fe8e8/services/cloudbuild.googleapis.com [omitted]
+[info] ✔  functions: required API cloudbuild.googleapis.com is enabled 
+[debug] [2024-08-08T14:36:33.679Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/clone-fe8e8/adminSdkConfig [none]
+[debug] [2024-08-08T14:36:34.283Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/clone-fe8e8/adminSdkConfig 200
+[debug] [2024-08-08T14:36:34.284Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/clone-fe8e8/adminSdkConfig {"projectId":"clone-fe8e8","databaseURL":"https://clone-fe8e8-default-rtdb.firebaseio.com","storageBucket":"clone-fe8e8.appspot.com"}
+[debug] [2024-08-08T14:36:34.284Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/clone-fe8e8/configs [none]
+[debug] [2024-08-08T14:36:34.733Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/clone-fe8e8/configs 200
+[debug] [2024-08-08T14:36:34.733Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/clone-fe8e8/configs {}
+[debug] [2024-08-08T14:36:34.735Z] Validating nodejs source
+[debug] [2024-08-08T14:36:35.644Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "@stripe/react-stripe-js": "^2.7.3",
+    "@stripe/stripe-js": "^4.1.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "firebase": "^10.12.4",
+    "firebase-admin": "^12.1.0",
+    "firebase-functions": "^5.0.0",
+    "react-icons": "^5.2.1",
+    "stripe": "^16.2.0"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2024-08-08T14:36:35.645Z] Building nodejs source
+[info] i  functions: Loading and analyzing source code for codebase default to determine what to deploy 
+[debug] [2024-08-08T14:36:35.646Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-08-08T14:36:35.655Z] Found firebase-functions binary at '/Users/bayushabebe/Documents/EVANGADI/Phase4/Amazon-clone /amazon-clone/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 8119
+
+[debug] [2024-08-08T14:36:36.157Z] Got response from /__/functions.yaml {"endpoints":{"api":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] i  functions: Loaded environment variables from .env. 
+[info] i  functions: preparing functions directory for uploading... 
+[info] i  functions: packaged /Users/bayushabebe/Documents/EVANGADI/Phase4/Amazon-clone /amazon-clone/functions (68.7 KB) for uploading 
+[debug] [2024-08-08T14:36:36.237Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/projects/clone-fe8e8/locations/-/functions [none]
+[debug] [2024-08-08T14:36:37.047Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/projects/clone-fe8e8/locations/-/functions 200
+[debug] [2024-08-08T14:36:37.048Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/projects/clone-fe8e8/locations/-/functions {}
+[debug] [2024-08-08T14:36:37.049Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/clone-fe8e8/locations/-/functions filter=environment%3D%22GEN_2%22
+[debug] [2024-08-08T14:36:37.661Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/clone-fe8e8/locations/-/functions 200
+[debug] [2024-08-08T14:36:37.662Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/clone-fe8e8/locations/-/functions {}
+[info] i  functions: ensuring required API run.googleapis.com is enabled... 
+[info] i  functions: ensuring required API eventarc.googleapis.com is enabled... 
+[info] i  functions: ensuring required API pubsub.googleapis.com is enabled... 
+[info] i  functions: ensuring required API storage.googleapis.com is enabled... 
+[debug] [2024-08-08T14:36:37.665Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/clone-fe8e8/services/run.googleapis.com [none]
+[debug] [2024-08-08T14:36:37.665Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/clone-fe8e8/services/run.googleapis.com x-goog-quota-user=projects/clone-fe8e8
+[debug] [2024-08-08T14:36:37.667Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/clone-fe8e8/services/eventarc.googleapis.com [none]
+[debug] [2024-08-08T14:36:37.667Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/clone-fe8e8/services/eventarc.googleapis.com x-goog-quota-user=projects/clone-fe8e8
+[debug] [2024-08-08T14:36:37.669Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/clone-fe8e8/services/pubsub.googleapis.com [none]
+[debug] [2024-08-08T14:36:37.669Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/clone-fe8e8/services/pubsub.googleapis.com x-goog-quota-user=projects/clone-fe8e8
+[debug] [2024-08-08T14:36:37.670Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/clone-fe8e8/services/storage.googleapis.com [none]
+[debug] [2024-08-08T14:36:37.670Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/clone-fe8e8/services/storage.googleapis.com x-goog-quota-user=projects/clone-fe8e8
+[debug] [2024-08-08T14:36:37.935Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/clone-fe8e8/services/pubsub.googleapis.com 200
+[debug] [2024-08-08T14:36:37.935Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/clone-fe8e8/services/pubsub.googleapis.com [omitted]
+[info] ✔  functions: required API pubsub.googleapis.com is enabled 
+[debug] [2024-08-08T14:36:37.950Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/clone-fe8e8/services/storage.googleapis.com 200
+[debug] [2024-08-08T14:36:37.950Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/clone-fe8e8/services/storage.googleapis.com [omitted]
+[info] ✔  functions: required API storage.googleapis.com is enabled 
+[debug] [2024-08-08T14:36:37.969Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/clone-fe8e8/services/run.googleapis.com 200
+[debug] [2024-08-08T14:36:37.969Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/clone-fe8e8/services/run.googleapis.com [omitted]
+[warn] ⚠  functions: missing required API run.googleapis.com. Enabling now... 
+[debug] [2024-08-08T14:36:37.969Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/clone-fe8e8/services/run.googleapis.com:enable [none]
+[debug] [2024-08-08T14:36:37.970Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/clone-fe8e8/services/run.googleapis.com:enable x-goog-quota-user=projects/clone-fe8e8
+[debug] [2024-08-08T14:36:37.973Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/clone-fe8e8/services/eventarc.googleapis.com 200
+[debug] [2024-08-08T14:36:37.973Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/clone-fe8e8/services/eventarc.googleapis.com [omitted]
+[warn] ⚠  functions: missing required API eventarc.googleapis.com. Enabling now... 
+[debug] [2024-08-08T14:36:37.974Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/clone-fe8e8/services/eventarc.googleapis.com:enable [none]
+[debug] [2024-08-08T14:36:37.974Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/clone-fe8e8/services/eventarc.googleapis.com:enable x-goog-quota-user=projects/clone-fe8e8
+[debug] [2024-08-08T14:36:38.584Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/clone-fe8e8/services/eventarc.googleapis.com:enable 200
+[debug] [2024-08-08T14:36:38.584Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/clone-fe8e8/services/eventarc.googleapis.com:enable [omitted]
+[debug] [2024-08-08T14:36:38.585Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/clone-fe8e8/services/run.googleapis.com:enable 200
+[debug] [2024-08-08T14:36:38.585Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/clone-fe8e8/services/run.googleapis.com:enable [omitted]
+[debug] [2024-08-08T14:36:48.585Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/clone-fe8e8/services/eventarc.googleapis.com [none]
+[debug] [2024-08-08T14:36:48.585Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/clone-fe8e8/services/eventarc.googleapis.com x-goog-quota-user=projects/clone-fe8e8
+[debug] [2024-08-08T14:36:48.588Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/clone-fe8e8/services/run.googleapis.com [none]
+[debug] [2024-08-08T14:36:48.589Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/clone-fe8e8/services/run.googleapis.com x-goog-quota-user=projects/clone-fe8e8
+[debug] [2024-08-08T14:36:49.030Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/clone-fe8e8/services/eventarc.googleapis.com 200
+[debug] [2024-08-08T14:36:49.030Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/clone-fe8e8/services/eventarc.googleapis.com [omitted]
+[info] ✔  functions: required API eventarc.googleapis.com is enabled 
+[debug] [2024-08-08T14:36:49.034Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/clone-fe8e8/services/run.googleapis.com 200
+[debug] [2024-08-08T14:36:49.034Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/clone-fe8e8/services/run.googleapis.com [omitted]
+[info] ✔  functions: required API run.googleapis.com is enabled 
+[info] i  functions: generating the service identity for pubsub.googleapis.com... 
+[info] i  functions: generating the service identity for eventarc.googleapis.com... 
+[debug] [2024-08-08T14:36:49.037Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1beta1/projects/782857397307/services/pubsub.googleapis.com:generateServiceIdentity [none]
+[debug] [2024-08-08T14:36:49.039Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1beta1/projects/782857397307/services/eventarc.googleapis.com:generateServiceIdentity [none]
+[debug] [2024-08-08T14:36:49.879Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1beta1/projects/782857397307/services/eventarc.googleapis.com:generateServiceIdentity 200
+[debug] [2024-08-08T14:36:49.880Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1beta1/projects/782857397307/services/eventarc.googleapis.com:generateServiceIdentity {"name":"operations/finished.DONE_OPERATION","done":true,"response":{"@type":"type.googleapis.com/google.api.serviceusage.v1beta1.ServiceIdentity","email":"service-782857397307@gcp-sa-eventarc.iam.gserviceaccount.com","uniqueId":"111763991899592506051"}}
+[debug] [2024-08-08T14:36:49.916Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1beta1/projects/782857397307/services/pubsub.googleapis.com:generateServiceIdentity 200
+[debug] [2024-08-08T14:36:49.916Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1beta1/projects/782857397307/services/pubsub.googleapis.com:generateServiceIdentity {"name":"operations/finished.DONE_OPERATION","done":true,"response":{"@type":"type.googleapis.com/google.api.serviceusage.v1beta1.ServiceIdentity","email":"service-782857397307@gcp-sa-pubsub.iam.gserviceaccount.com","uniqueId":"105187932604220435772"}}
+[debug] [2024-08-08T14:36:49.919Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/clone-fe8e8 [none]
+[debug] [2024-08-08T14:36:50.161Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/clone-fe8e8 200
+[debug] [2024-08-08T14:36:50.161Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/clone-fe8e8 {"projectId":"clone-fe8e8","projectNumber":"782857397307","displayName":"Amazon-Clone","name":"projects/clone-fe8e8","resources":{"hostingSite":"clone-fe8e8","realtimeDatabaseInstance":"clone-fe8e8-default-rtdb"},"state":"ACTIVE","etag":"1_c91f8d0d-21b3-4d43-9f4d-d705aec0faf7"}
+[debug] [2024-08-08T14:36:50.162Z] [functions] found 1 new HTTP functions, testing setIamPolicy permission...
+[debug] [2024-08-08T14:36:50.163Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/clone-fe8e8:testIamPermissions [none]
+[debug] [2024-08-08T14:36:50.163Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/clone-fe8e8:testIamPermissions x-goog-quota-user=projects/clone-fe8e8
+[debug] [2024-08-08T14:36:50.163Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/clone-fe8e8:testIamPermissions {"permissions":["cloudfunctions.functions.setIamPolicy"]}
+[debug] [2024-08-08T14:36:50.299Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/clone-fe8e8:testIamPermissions 200
+[debug] [2024-08-08T14:36:50.300Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/clone-fe8e8:testIamPermissions {"permissions":["cloudfunctions.functions.setIamPolicy"]}
+[debug] [2024-08-08T14:36:50.300Z] [functions] found setIamPolicy permission, proceeding with deploy
+[debug] [2024-08-08T14:36:50.301Z] >>> [apiv2][query] POST https://cloudfunctions.googleapis.com/v2/projects/clone-fe8e8/locations/us-central1/functions:generateUploadUrl [none]
+[debug] [2024-08-08T14:36:51.485Z] <<< [apiv2][status] POST https://cloudfunctions.googleapis.com/v2/projects/clone-fe8e8/locations/us-central1/functions:generateUploadUrl 200
+[debug] [2024-08-08T14:36:51.485Z] <<< [apiv2][body] POST https://cloudfunctions.googleapis.com/v2/projects/clone-fe8e8/locations/us-central1/functions:generateUploadUrl {"uploadUrl":"https://storage.googleapis.com/gcf-v2-uploads-782857397307-us-central1/1377b751-1c4a-4824-9478-774092b02093.zip?GoogleAccessId=service-782857397307@gcf-admin-robot.iam.gserviceaccount.com&Expires=1723129611&Signature=H18d65vOJHEnNpDV2V1fdW%2BYxJkJCLDgMsJ%2BF5%2BHQYF4aOxvEY1luVcar4x5BSROTYkZzRru0wEYsNxCVo83Auy%2FHp57RyRPa7NsALgNLR2pP7qz%2FKpKQ6OeAi80E7fqDOrJuD7NO%2FKMl%2ByfDV%2FsV21mUplZivW3JE9D25qxjuHN%2FKKLROyPbiJQpR5AYaUVNXj7n6sJXz%2FFQrif5TDL037RkuQA%2BBaLBaGW%2BpgMBs6KQJBq3qTGVuC2SHHSg1a3HkuJ5xDZd%2BWONkCM91Be2enRxivYF50g55bEMMfll6baTDpxO77cZEg%2FaBdnfDfFcybfIw9%2F9w5ggAjm1qbjSg%3D%3D","storageSource":{"bucket":"gcf-v2-uploads-782857397307-us-central1","object":"1377b751-1c4a-4824-9478-774092b02093.zip"}}
+[debug] [2024-08-08T14:36:51.487Z] >>> [apiv2][query] PUT https://storage.googleapis.com/gcf-v2-uploads-782857397307-us-central1/1377b751-1c4a-4824-9478-774092b02093.zip GoogleAccessId=service-782857397307%40gcf-admin-robot.iam.gserviceaccount.com&Expires=1723129611&Signature=H18d65vOJHEnNpDV2V1fdW%2BYxJkJCLDgMsJ%2BF5%2BHQYF4aOxvEY1luVcar4x5BSROTYkZzRru0wEYsNxCVo83Auy%2FHp57RyRPa7NsALgNLR2pP7qz%2FKpKQ6OeAi80E7fqDOrJuD7NO%2FKMl%2ByfDV%2FsV21mUplZivW3JE9D25qxjuHN%2FKKLROyPbiJQpR5AYaUVNXj7n6sJXz%2FFQrif5TDL037RkuQA%2BBaLBaGW%2BpgMBs6KQJBq3qTGVuC2SHHSg1a3HkuJ5xDZd%2BWONkCM91Be2enRxivYF50g55bEMMfll6baTDpxO77cZEg%2FaBdnfDfFcybfIw9%2F9w5ggAjm1qbjSg%3D%3D
+[debug] [2024-08-08T14:36:51.487Z] >>> [apiv2][body] PUT https://storage.googleapis.com/gcf-v2-uploads-782857397307-us-central1/1377b751-1c4a-4824-9478-774092b02093.zip [stream]
+[debug] [2024-08-08T14:36:51.925Z] <<< [apiv2][status] PUT https://storage.googleapis.com/gcf-v2-uploads-782857397307-us-central1/1377b751-1c4a-4824-9478-774092b02093.zip 200
+[debug] [2024-08-08T14:36:51.925Z] <<< [apiv2][body] PUT https://storage.googleapis.com/gcf-v2-uploads-782857397307-us-central1/1377b751-1c4a-4824-9478-774092b02093.zip [omitted]
+[info] ✔  functions: functions folder uploaded successfully 
+[info] i  functions: creating Node.js 18 (2nd Gen) function api(us-central1)... 
+[debug] [2024-08-08T14:36:51.931Z] >>> [apiv2][query] POST https://cloudfunctions.googleapis.com/v2/projects/clone-fe8e8/locations/us-central1/functions functionId=api
+[debug] [2024-08-08T14:36:51.931Z] >>> [apiv2][body] POST https://cloudfunctions.googleapis.com/v2/projects/clone-fe8e8/locations/us-central1/functions {"name":"projects/clone-fe8e8/locations/us-central1/functions/api","buildConfig":{"runtime":"nodejs18","entryPoint":"api","source":{"storageSource":{"bucket":"gcf-v2-uploads-782857397307-us-central1","object":"1377b751-1c4a-4824-9478-774092b02093.zip"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""}},"serviceConfig":{"environmentVariables":{"STRIPE_KEY":"sk_test_51PfVvoDk1tZ3kRLgLyxwFf8eJEpT0bBcpsWPDnwsT2I8gOHOWTioIWSpGhnpUJOa4wkYTS5RA549cU8u71jINYZb00xyyJoZfc","FIREBASE_CONFIG":"{\"projectId\":\"clone-fe8e8\",\"databaseURL\":\"https://clone-fe8e8-default-rtdb.firebaseio.com\",\"storageBucket\":\"clone-fe8e8.appspot.com\"}","GCLOUD_PROJECT":"clone-fe8e8","EVENTARC_CLOUD_EVENT_SOURCE":"projects/clone-fe8e8/locations/us-central1/services/api","FUNCTION_TARGET":"api"},"ingressSettings":null,"timeoutSeconds":null,"serviceAccountEmail":null,"availableMemory":"256Mi","minInstanceCount":null,"maxInstanceCount":null,"maxInstanceRequestConcurrency":80,"availableCpu":"1","vpcConnector":null,"vpcConnectorEgressSettings":null},"labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"170d77f07d56045c2ae273f5b6cd149637944ae0"}}
+[debug] [2024-08-08T14:36:53.636Z] <<< [apiv2][status] POST https://cloudfunctions.googleapis.com/v2/projects/clone-fe8e8/locations/us-central1/functions 200
+[debug] [2024-08-08T14:36:53.636Z] <<< [apiv2][body] POST https://cloudfunctions.googleapis.com/v2/projects/clone-fe8e8/locations/us-central1/functions {"name":"projects/clone-fe8e8/locations/us-central1/operations/operation-1723127812036-61f2cf52398cf-478fafd6-d129fc02","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2024-08-08T14:36:53.310148342Z","target":"projects/clone-fe8e8/locations/us-central1/functions/api","verb":"create","cancelRequested":false,"apiVersion":"v2"},"done":false}
+[debug] [2024-08-08T14:36:53.637Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/clone-fe8e8/locations/us-central1/operations/operation-1723127812036-61f2cf52398cf-478fafd6-d129fc02 [none]
+[debug] [2024-08-08T14:36:53.884Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/clone-fe8e8/locations/us-central1/operations/operation-1723127812036-61f2cf52398cf-478fafd6-d129fc02 200
+[debug] [2024-08-08T14:36:53.885Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/clone-fe8e8/locations/us-central1/operations/operation-1723127812036-61f2cf52398cf-478fafd6-d129fc02 {"name":"projects/clone-fe8e8/locations/us-central1/operations/operation-1723127812036-61f2cf52398cf-478fafd6-d129fc02","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2024-08-08T14:36:53.310148342Z","target":"projects/clone-fe8e8/locations/us-central1/functions/api","verb":"create","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/clone-fe8e8/locations/us-central1/functions/api","buildConfig":{"runtime":"nodejs18","entryPoint":"api","source":{"storageSource":{"bucket":"gcf-v2-sources-782857397307-us-central1","object":"api/function-source.zip","generation":"1723127812951333"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"serviceAccount":"projects/clone-fe8e8/serviceAccounts/782857397307-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/clone-fe8e8/locations/us-central1/services/api","timeoutSeconds":60,"environmentVariables":{"STRIPE_KEY":"sk_test_51PfVvoDk1tZ3kRLgLyxwFf8eJEpT0bBcpsWPDnwsT2I8gOHOWTioIWSpGhnpUJOa4wkYTS5RA549cU8u71jINYZb00xyyJoZfc","FIREBASE_CONFIG":"{\"projectId\":\"clone-fe8e8\",\"databaseURL\":\"https://clone-fe8e8-default-rtdb.firebaseio.com\",\"storageBucket\":\"clone-fe8e8.appspot.com\"}","GCLOUD_PROJECT":"clone-fe8e8","EVENTARC_CLOUD_EVENT_SOURCE":"projects/clone-fe8e8/locations/us-central1/services/api","FUNCTION_TARGET":"api","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","serviceAccountEmail":"782857397307-compute@developer.gserviceaccount.com","availableMemory":"256Mi","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"170d77f07d56045c2ae273f5b6cd149637944ae0"},"environment":"GEN_2"},"stages":[{"name":"BUILD","state":"NOT_STARTED"},{"name":"SERVICE","state":"NOT_STARTED"}],"operationType":"CREATE_FUNCTION"},"done":false}
+[debug] [2024-08-08T14:36:54.387Z] [create-default-us-central1-api] Retrying task index 0
+[debug] [2024-08-08T14:36:54.387Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/clone-fe8e8/locations/us-central1/operations/operation-1723127812036-61f2cf52398cf-478fafd6-d129fc02 [none]
+[debug] [2024-08-08T14:36:54.866Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/clone-fe8e8/locations/us-central1/operations/operation-1723127812036-61f2cf52398cf-478fafd6-d129fc02 200
+[debug] [2024-08-08T14:36:54.866Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/clone-fe8e8/locations/us-central1/operations/operation-1723127812036-61f2cf52398cf-478fafd6-d129fc02 {"name":"projects/clone-fe8e8/locations/us-central1/operations/operation-1723127812036-61f2cf52398cf-478fafd6-d129fc02","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2024-08-08T14:36:53.310148342Z","target":"projects/clone-fe8e8/locations/us-central1/functions/api","verb":"create","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/clone-fe8e8/locations/us-central1/functions/api","buildConfig":{"runtime":"nodejs18","entryPoint":"api","source":{"storageSource":{"bucket":"gcf-v2-sources-782857397307-us-central1","object":"api/function-source.zip","generation":"1723127812951333"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"serviceAccount":"projects/clone-fe8e8/serviceAccounts/782857397307-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/clone-fe8e8/locations/us-central1/services/api","timeoutSeconds":60,"environmentVariables":{"STRIPE_KEY":"sk_test_51PfVvoDk1tZ3kRLgLyxwFf8eJEpT0bBcpsWPDnwsT2I8gOHOWTioIWSpGhnpUJOa4wkYTS5RA549cU8u71jINYZb00xyyJoZfc","FIREBASE_CONFIG":"{\"projectId\":\"clone-fe8e8\",\"databaseURL\":\"https://clone-fe8e8-default-rtdb.firebaseio.com\",\"storageBucket\":\"clone-fe8e8.appspot.com\"}","GCLOUD_PROJECT":"clone-fe8e8","EVENTARC_CLOUD_EVENT_SOURCE":"projects/clone-fe8e8/locations/us-central1/services/api","FUNCTION_TARGET":"api","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","serviceAccountEmail":"782857397307-compute@developer.gserviceaccount.com","availableMemory":"256Mi","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"170d77f07d56045c2ae273f5b6cd149637944ae0"},"environment":"GEN_2"},"stages":[{"name":"BUILD","state":"NOT_STARTED"},{"name":"SERVICE","state":"NOT_STARTED"}],"operationType":"CREATE_FUNCTION"},"done":false}
+[debug] [2024-08-08T14:36:55.867Z] [create-default-us-central1-api] Retrying task index 0
+[debug] [2024-08-08T14:36:55.868Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/clone-fe8e8/locations/us-central1/operations/operation-1723127812036-61f2cf52398cf-478fafd6-d129fc02 [none]
+[debug] [2024-08-08T14:36:56.098Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/clone-fe8e8/locations/us-central1/operations/operation-1723127812036-61f2cf52398cf-478fafd6-d129fc02 200
+[debug] [2024-08-08T14:36:56.098Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/clone-fe8e8/locations/us-central1/operations/operation-1723127812036-61f2cf52398cf-478fafd6-d129fc02 {"name":"projects/clone-fe8e8/locations/us-central1/operations/operation-1723127812036-61f2cf52398cf-478fafd6-d129fc02","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2024-08-08T14:36:53.310148342Z","target":"projects/clone-fe8e8/locations/us-central1/functions/api","verb":"create","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/clone-fe8e8/locations/us-central1/functions/api","buildConfig":{"runtime":"nodejs18","entryPoint":"api","source":{"storageSource":{"bucket":"gcf-v2-sources-782857397307-us-central1","object":"api/function-source.zip","generation":"1723127812951333"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"serviceAccount":"projects/clone-fe8e8/serviceAccounts/782857397307-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/clone-fe8e8/locations/us-central1/services/api","timeoutSeconds":60,"environmentVariables":{"STRIPE_KEY":"sk_test_51PfVvoDk1tZ3kRLgLyxwFf8eJEpT0bBcpsWPDnwsT2I8gOHOWTioIWSpGhnpUJOa4wkYTS5RA549cU8u71jINYZb00xyyJoZfc","FIREBASE_CONFIG":"{\"projectId\":\"clone-fe8e8\",\"databaseURL\":\"https://clone-fe8e8-default-rtdb.firebaseio.com\",\"storageBucket\":\"clone-fe8e8.appspot.com\"}","GCLOUD_PROJECT":"clone-fe8e8","EVENTARC_CLOUD_EVENT_SOURCE":"projects/clone-fe8e8/locations/us-central1/services/api","FUNCTION_TARGET":"api","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","serviceAccountEmail":"782857397307-compute@developer.gserviceaccount.com","availableMemory":"256Mi","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"170d77f07d56045c2ae273f5b6cd149637944ae0"},"environment":"GEN_2"},"stages":[{"name":"BUILD","state":"NOT_STARTED"},{"name":"SERVICE","state":"NOT_STARTED"}],"operationType":"CREATE_FUNCTION"},"done":false}
+[debug] [2024-08-08T14:36:58.100Z] [create-default-us-central1-api] Retrying task index 0
+[debug] [2024-08-08T14:36:58.101Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/clone-fe8e8/locations/us-central1/operations/operation-1723127812036-61f2cf52398cf-478fafd6-d129fc02 [none]
+[debug] [2024-08-08T14:36:58.553Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/clone-fe8e8/locations/us-central1/operations/operation-1723127812036-61f2cf52398cf-478fafd6-d129fc02 200
+[debug] [2024-08-08T14:36:58.553Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/clone-fe8e8/locations/us-central1/operations/operation-1723127812036-61f2cf52398cf-478fafd6-d129fc02 {"name":"projects/clone-fe8e8/locations/us-central1/operations/operation-1723127812036-61f2cf52398cf-478fafd6-d129fc02","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2024-08-08T14:36:53.310148342Z","target":"projects/clone-fe8e8/locations/us-central1/functions/api","verb":"create","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/clone-fe8e8/locations/us-central1/functions/api","buildConfig":{"runtime":"nodejs18","entryPoint":"api","source":{"storageSource":{"bucket":"gcf-v2-sources-782857397307-us-central1","object":"api/function-source.zip","generation":"1723127812951333"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"serviceAccount":"projects/clone-fe8e8/serviceAccounts/782857397307-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/clone-fe8e8/locations/us-central1/services/api","timeoutSeconds":60,"environmentVariables":{"STRIPE_KEY":"sk_test_51PfVvoDk1tZ3kRLgLyxwFf8eJEpT0bBcpsWPDnwsT2I8gOHOWTioIWSpGhnpUJOa4wkYTS5RA549cU8u71jINYZb00xyyJoZfc","FIREBASE_CONFIG":"{\"projectId\":\"clone-fe8e8\",\"databaseURL\":\"https://clone-fe8e8-default-rtdb.firebaseio.com\",\"storageBucket\":\"clone-fe8e8.appspot.com\"}","GCLOUD_PROJECT":"clone-fe8e8","EVENTARC_CLOUD_EVENT_SOURCE":"projects/clone-fe8e8/locations/us-central1/services/api","FUNCTION_TARGET":"api","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","serviceAccountEmail":"782857397307-compute@developer.gserviceaccount.com","availableMemory":"256Mi","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"170d77f07d56045c2ae273f5b6cd149637944ae0"},"environment":"GEN_2"},"stages":[{"name":"BUILD","state":"NOT_STARTED"},{"name":"SERVICE","state":"NOT_STARTED"}],"operationType":"CREATE_FUNCTION"},"done":false}
+[debug] [2024-08-08T14:37:02.555Z] [create-default-us-central1-api] Retrying task index 0
+[debug] [2024-08-08T14:37:02.555Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/clone-fe8e8/locations/us-central1/operations/operation-1723127812036-61f2cf52398cf-478fafd6-d129fc02 [none]
+[debug] [2024-08-08T14:37:02.684Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/clone-fe8e8/locations/us-central1/operations/operation-1723127812036-61f2cf52398cf-478fafd6-d129fc02 200
+[debug] [2024-08-08T14:37:02.684Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/clone-fe8e8/locations/us-central1/operations/operation-1723127812036-61f2cf52398cf-478fafd6-d129fc02 {"name":"projects/clone-fe8e8/locations/us-central1/operations/operation-1723127812036-61f2cf52398cf-478fafd6-d129fc02","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2024-08-08T14:36:53.310148342Z","target":"projects/clone-fe8e8/locations/us-central1/functions/api","verb":"create","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/clone-fe8e8/locations/us-central1/functions/api","buildConfig":{"runtime":"nodejs18","entryPoint":"api","source":{"storageSource":{"bucket":"gcf-v2-sources-782857397307-us-central1","object":"api/function-source.zip","generation":"1723127812951333"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"serviceAccount":"projects/clone-fe8e8/serviceAccounts/782857397307-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/clone-fe8e8/locations/us-central1/services/api","timeoutSeconds":60,"environmentVariables":{"STRIPE_KEY":"sk_test_51PfVvoDk1tZ3kRLgLyxwFf8eJEpT0bBcpsWPDnwsT2I8gOHOWTioIWSpGhnpUJOa4wkYTS5RA549cU8u71jINYZb00xyyJoZfc","FIREBASE_CONFIG":"{\"projectId\":\"clone-fe8e8\",\"databaseURL\":\"https://clone-fe8e8-default-rtdb.firebaseio.com\",\"storageBucket\":\"clone-fe8e8.appspot.com\"}","GCLOUD_PROJECT":"clone-fe8e8","EVENTARC_CLOUD_EVENT_SOURCE":"projects/clone-fe8e8/locations/us-central1/services/api","FUNCTION_TARGET":"api","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","serviceAccountEmail":"782857397307-compute@developer.gserviceaccount.com","availableMemory":"256Mi","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"170d77f07d56045c2ae273f5b6cd149637944ae0"},"environment":"GEN_2"},"stages":[{"name":"BUILD","state":"NOT_STARTED"},{"name":"SERVICE","state":"NOT_STARTED"}],"operationType":"CREATE_FUNCTION"},"done":false}
+[debug] [2024-08-08T14:37:10.685Z] [create-default-us-central1-api] Retrying task index 0
+[debug] [2024-08-08T14:37:10.685Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/clone-fe8e8/locations/us-central1/operations/operation-1723127812036-61f2cf52398cf-478fafd6-d129fc02 [none]
+[debug] [2024-08-08T14:37:10.914Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/clone-fe8e8/locations/us-central1/operations/operation-1723127812036-61f2cf52398cf-478fafd6-d129fc02 200
+[debug] [2024-08-08T14:37:10.914Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/clone-fe8e8/locations/us-central1/operations/operation-1723127812036-61f2cf52398cf-478fafd6-d129fc02 {"name":"projects/clone-fe8e8/locations/us-central1/operations/operation-1723127812036-61f2cf52398cf-478fafd6-d129fc02","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2024-08-08T14:36:53.310148342Z","target":"projects/clone-fe8e8/locations/us-central1/functions/api","verb":"create","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/clone-fe8e8/locations/us-central1/functions/api","buildConfig":{"runtime":"nodejs18","entryPoint":"api","source":{"storageSource":{"bucket":"gcf-v2-sources-782857397307-us-central1","object":"api/function-source.zip","generation":"1723127812951333"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"serviceAccount":"projects/clone-fe8e8/serviceAccounts/782857397307-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/clone-fe8e8/locations/us-central1/services/api","timeoutSeconds":60,"environmentVariables":{"STRIPE_KEY":"sk_test_51PfVvoDk1tZ3kRLgLyxwFf8eJEpT0bBcpsWPDnwsT2I8gOHOWTioIWSpGhnpUJOa4wkYTS5RA549cU8u71jINYZb00xyyJoZfc","FIREBASE_CONFIG":"{\"projectId\":\"clone-fe8e8\",\"databaseURL\":\"https://clone-fe8e8-default-rtdb.firebaseio.com\",\"storageBucket\":\"clone-fe8e8.appspot.com\"}","GCLOUD_PROJECT":"clone-fe8e8","EVENTARC_CLOUD_EVENT_SOURCE":"projects/clone-fe8e8/locations/us-central1/services/api","FUNCTION_TARGET":"api","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","serviceAccountEmail":"782857397307-compute@developer.gserviceaccount.com","availableMemory":"256Mi","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"170d77f07d56045c2ae273f5b6cd149637944ae0"},"environment":"GEN_2"},"stages":[{"name":"BUILD","message":"Build in progress","state":"IN_PROGRESS","resource":"projects/782857397307/locations/us-central1/builds/eaf26139-e862-49f9-a376-dadd95245397","resourceUri":"https://console.cloud.google.com/cloud-build/builds;region=us-central1/eaf26139-e862-49f9-a376-dadd95245397?project=782857397307"},{"name":"SERVICE","state":"NOT_STARTED"}],"operationType":"CREATE_FUNCTION","buildName":"projects/782857397307/locations/us-central1/builds/eaf26139-e862-49f9-a376-dadd95245397"},"done":false}
+[debug] [2024-08-08T14:37:20.916Z] [create-default-us-central1-api] Retrying task index 0
+[debug] [2024-08-08T14:37:20.917Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/clone-fe8e8/locations/us-central1/operations/operation-1723127812036-61f2cf52398cf-478fafd6-d129fc02 [none]
+[debug] [2024-08-08T14:37:21.284Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/clone-fe8e8/locations/us-central1/operations/operation-1723127812036-61f2cf52398cf-478fafd6-d129fc02 200
+[debug] [2024-08-08T14:37:21.284Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/clone-fe8e8/locations/us-central1/operations/operation-1723127812036-61f2cf52398cf-478fafd6-d129fc02 {"name":"projects/clone-fe8e8/locations/us-central1/operations/operation-1723127812036-61f2cf52398cf-478fafd6-d129fc02","metadata":{"@type":"type.googleapis.com/google.cloud.functions.v2.OperationMetadata","createTime":"2024-08-08T14:36:53.310148342Z","endTime":"2024-08-08T14:37:15.637020801Z","target":"projects/clone-fe8e8/locations/us-central1/functions/api","verb":"create","cancelRequested":false,"apiVersion":"v2","requestResource":{"@type":"type.googleapis.com/google.cloud.functions.v2.Function","name":"projects/clone-fe8e8/locations/us-central1/functions/api","buildConfig":{"runtime":"nodejs18","entryPoint":"api","source":{"storageSource":{"bucket":"gcf-v2-sources-782857397307-us-central1","object":"api/function-source.zip","generation":"1723127812951333"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"serviceAccount":"projects/clone-fe8e8/serviceAccounts/782857397307-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/clone-fe8e8/locations/us-central1/services/api","timeoutSeconds":60,"environmentVariables":{"STRIPE_KEY":"sk_test_51PfVvoDk1tZ3kRLgLyxwFf8eJEpT0bBcpsWPDnwsT2I8gOHOWTioIWSpGhnpUJOa4wkYTS5RA549cU8u71jINYZb00xyyJoZfc","FIREBASE_CONFIG":"{\"projectId\":\"clone-fe8e8\",\"databaseURL\":\"https://clone-fe8e8-default-rtdb.firebaseio.com\",\"storageBucket\":\"clone-fe8e8.appspot.com\"}","GCLOUD_PROJECT":"clone-fe8e8","EVENTARC_CLOUD_EVENT_SOURCE":"projects/clone-fe8e8/locations/us-central1/services/api","FUNCTION_TARGET":"api","LOG_EXECUTION_ID":"true"},"ingressSettings":"ALLOW_ALL","serviceAccountEmail":"782857397307-compute@developer.gserviceaccount.com","availableMemory":"256Mi","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"170d77f07d56045c2ae273f5b6cd149637944ae0"},"environment":"GEN_2"},"stages":[{"name":"ARTIFACT_REGISTRY","message":"Deleting function artifacts in Artifact Registry","state":"COMPLETE"},{"name":"SERVICE","message":"Deleting Cloud Run service","state":"COMPLETE","resource":"projects/clone-fe8e8/locations/us-central1/services/api"}],"operationType":"CREATE_FUNCTION"},"done":true,"error":{"code":13,"message":"Build failed with status: INTERNAL_ERROR and message: An unexpected error occurred. Refer to build logs: https://console.cloud.google.com/cloud-build/builds;region=us-central1/eaf26139-e862-49f9-a376-dadd95245397?project=782857397307. For more details see the logs at https://console.cloud.google.com/cloud-build/builds;region=us-central1/eaf26139-e862-49f9-a376-dadd95245397?project=782857397307."}}
+[debug] [2024-08-08T14:37:21.284Z] Got source token undefined for region us-central1
+[error] Build failed with status: INTERNAL_ERROR and message: An unexpected error occurred. Refer to build logs: https://console.cloud.google.com/cloud-build/builds;region=us-central1/eaf26139-e862-49f9-a376-dadd95245397?project=782857397307. For more details see the logs at https://console.cloud.google.com/cloud-build/builds;region=us-central1/eaf26139-e862-49f9-a376-dadd95245397?project=782857397307.
+[debug] [2024-08-08T14:37:21.291Z] Total Function Deployment time: 29358
+[debug] [2024-08-08T14:37:21.291Z] 1 Functions Deployed
+[debug] [2024-08-08T14:37:21.292Z] 1 Functions Errored
+[debug] [2024-08-08T14:37:21.292Z] 0 Function Deployments Aborted
+[debug] [2024-08-08T14:37:21.292Z] Average Function Deployment time: 29357
+[info] 
+[info] Functions deploy had errors with the following functions:
+	api(us-central1)
+[debug] [2024-08-08T14:37:21.331Z] Not printing URL for HTTPS function. Typically this means it didn't match a filter or we failed deployment
+[info] i  functions: cleaning up build files... 
+[debug] [2024-08-08T14:37:21.332Z] >>> [apiv2][query] DELETE https://artifactregistry.googleapis.com/v1beta2/projects/clone-fe8e8/locations/us-central1/repositories/gcf-artifacts/packages/api [none]
+[debug] [2024-08-08T14:37:21.333Z] >>> [apiv2][query] GET https://us.gcr.io/v2/clone-fe8e8/gcf/us-central1/tags/list [none]
+[debug] [2024-08-08T14:37:21.856Z] <<< [apiv2][status] DELETE https://artifactregistry.googleapis.com/v1beta2/projects/clone-fe8e8/locations/us-central1/repositories/gcf-artifacts/packages/api 404
+[debug] [2024-08-08T14:37:21.856Z] <<< [apiv2][body] DELETE https://artifactregistry.googleapis.com/v1beta2/projects/clone-fe8e8/locations/us-central1/repositories/gcf-artifacts/packages/api {"error":{"code":404,"message":"Package \"projects/clone-fe8e8/locations/us-central1/repositories/gcf-artifacts/packages/api\" was not found.","status":"NOT_FOUND"}}
+[debug] [2024-08-08T14:37:21.911Z] <<< [apiv2][status] GET https://us.gcr.io/v2/clone-fe8e8/gcf/us-central1/tags/list 404
+[debug] [2024-08-08T14:37:21.911Z] <<< [apiv2][body] GET https://us.gcr.io/v2/clone-fe8e8/gcf/us-central1/tags/list {"errors":[{"code":"NAME_UNKNOWN","message":"Repository \"us.gcr.io\" not found"}]}
+[debug] [2024-08-08T14:37:21.911Z] Failed docker command with error  HTTP Error: 404, Not Found {"name":"FirebaseError","children":[],"context":{"body":{"errors":[{"code":"NAME_UNKNOWN","message":"Repository \"us.gcr.io\" not found"}],"error":{"message":"Not Found"}},"response":{"statusCode":404}},"exit":1,"message":"HTTP Error: 404, Not Found","status":404}
+[debug] [2024-08-08T14:37:21.914Z] >>> [apiv2][query] GET https://us.gcr.io/v2/clone-fe8e8/gcf/us-central1/tags/list [none]
+[debug] [2024-08-08T14:37:22.061Z] <<< [apiv2][status] GET https://us.gcr.io/v2/clone-fe8e8/gcf/us-central1/tags/list 404
+[debug] [2024-08-08T14:37:22.062Z] <<< [apiv2][body] GET https://us.gcr.io/v2/clone-fe8e8/gcf/us-central1/tags/list {"errors":[{"code":"NAME_UNKNOWN","message":"Repository \"us.gcr.io\" not found"}]}
+[debug] [2024-08-08T14:37:22.062Z] Failed docker command with error  HTTP Error: 404, Not Found {"name":"FirebaseError","children":[],"context":{"body":{"errors":[{"code":"NAME_UNKNOWN","message":"Repository \"us.gcr.io\" not found"}],"error":{"message":"Not Found"}},"response":{"statusCode":404}},"exit":1,"message":"HTTP Error: 404, Not Found","status":404}
+[debug] [2024-08-08T14:37:22.164Z] >>> [apiv2][query] GET https://us.gcr.io/v2/clone-fe8e8/gcf/us-central1/tags/list [none]
+[debug] [2024-08-08T14:37:22.308Z] <<< [apiv2][status] GET https://us.gcr.io/v2/clone-fe8e8/gcf/us-central1/tags/list 404
+[debug] [2024-08-08T14:37:22.308Z] <<< [apiv2][body] GET https://us.gcr.io/v2/clone-fe8e8/gcf/us-central1/tags/list {"errors":[{"code":"NAME_UNKNOWN","message":"Repository \"us.gcr.io\" not found"}]}
+[debug] [2024-08-08T14:37:22.308Z] Failed docker command with error  HTTP Error: 404, Not Found {"name":"FirebaseError","children":[],"context":{"body":{"errors":[{"code":"NAME_UNKNOWN","message":"Repository \"us.gcr.io\" not found"}],"error":{"message":"Not Found"}},"response":{"statusCode":404}},"exit":1,"message":"HTTP Error: 404, Not Found","status":404}
+[warn] ⚠  functions: Unhandled error cleaning up build images. This could result in a small monthly bill if not corrected. You can attempt to delete these images by redeploying or you can delete them manually at https://console.cloud.google.com/gcr/images/clone-fe8e8/us/gcf 
+[debug] [2024-08-08T14:37:22.309Z] Functions deploy failed.
+[debug] [2024-08-08T14:37:22.309Z] {
+  "endpoint": {
+    "id": "api",
+    "project": "clone-fe8e8",
+    "region": "us-central1",
+    "entryPoint": "api",
+    "platform": "gcfv2",
+    "runtime": "nodejs18",
+    "httpsTrigger": {},
+    "labels": {
+      "deployment-tool": "cli-firebase"
+    },
+    "ingressSettings": null,
+    "availableMemoryMb": null,
+    "serviceAccount": null,
+    "timeoutSeconds": null,
+    "maxInstances": null,
+    "minInstances": null,
+    "concurrency": 80,
+    "vpc": null,
+    "environmentVariables": {
+      "STRIPE_KEY": "sk_test_51PfVvoDk1tZ3kRLgLyxwFf8eJEpT0bBcpsWPDnwsT2I8gOHOWTioIWSpGhnpUJOa4wkYTS5RA549cU8u71jINYZb00xyyJoZfc",
+      "FIREBASE_CONFIG": "{\"projectId\":\"clone-fe8e8\",\"databaseURL\":\"https://clone-fe8e8-default-rtdb.firebaseio.com\",\"storageBucket\":\"clone-fe8e8.appspot.com\"}",
+      "GCLOUD_PROJECT": "clone-fe8e8",
+      "EVENTARC_CLOUD_EVENT_SOURCE": "projects/clone-fe8e8/locations/us-central1/services/api"
+    },
+    "codebase": "default",
+    "cpu": 1,
+    "targetedByOnly": false,
+    "hash": "170d77f07d56045c2ae273f5b6cd149637944ae0"
+  },
+  "op": "create",
+  "original": {
+    "name": "FirebaseError",
+    "children": [],
+    "exit": 1,
+    "message": "Build failed with status: INTERNAL_ERROR and message: An unexpected error occurred. Refer to build logs: https://console.cloud.google.com/cloud-build/builds;region=us-central1/eaf26139-e862-49f9-a376-dadd95245397?project=782857397307. For more details see the logs at https://console.cloud.google.com/cloud-build/builds;region=us-central1/eaf26139-e862-49f9-a376-dadd95245397?project=782857397307.",
+    "original": {
+      "code": 13,
+      "message": "Build failed with status: INTERNAL_ERROR and message: An unexpected error occurred. Refer to build logs: https://console.cloud.google.com/cloud-build/builds;region=us-central1/eaf26139-e862-49f9-a376-dadd95245397?project=782857397307. For more details see the logs at https://console.cloud.google.com/cloud-build/builds;region=us-central1/eaf26139-e862-49f9-a376-dadd95245397?project=782857397307."
+    },
+    "status": 13,
+    "code": 13
+  }
+}
+[debug] [2024-08-08T14:37:22.355Z] Error: Failed to create function api in region us-central1
+    at /Users/bayushabebe/.nvm/versions/node/v18.20.4/lib/node_modules/firebase-tools/lib/deploy/functions/release/fabricator.js:294:27
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Fabricator.createV2Function (/Users/bayushabebe/.nvm/versions/node/v18.20.4/lib/node_modules/firebase-tools/lib/deploy/functions/release/fabricator.js:278:30)
+    at async Fabricator.createEndpoint (/Users/bayushabebe/.nvm/versions/node/v18.20.4/lib/node_modules/firebase-tools/lib/deploy/functions/release/fabricator.js:137:13)
+    at async handle (/Users/bayushabebe/.nvm/versions/node/v18.20.4/lib/node_modules/firebase-tools/lib/deploy/functions/release/fabricator.js:89:17)
+[error] 
+[error] Error: There was an error deploying functions
